@@ -39,11 +39,11 @@ const TravelSection = () => {
           <h4 className="text-[#d01822] text-sm uppercase tracking-wide mb-2">
             Callback for More
           </h4>
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
           GO TRAVEL. DISCOVER. <br />
             AND MAKE MEMORIES WITH US!
           </h2>
-          <p className="text-gray-600 mb-6 leading-relaxed">
+          <p className="text-gray-600 mb-6 leading-relaxed text-sm sm:text-lg">
           Embark on unforgettable journeys to the world’s most stunning destinations. Whether it’s pristine beaches, ancient landmarks, vibrant cities, or serene mountain escapes—we’ve got you covered!
           </p>
 

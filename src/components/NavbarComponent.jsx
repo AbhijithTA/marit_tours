@@ -11,8 +11,8 @@ const Navbar = () => {
               href="/"
               className="flex items-center text-[#077045] text-2xl font-bold"
             >
-              <img src="/MarittoursLogo.jpg" className="h-20 px-6"/>
-              <h1 className="Equila">Marit Tours</h1>
+              <img src="/MarittoursLogo.jpg" className="h-20 sm:px-6"/>
+              <h1 className="Equila text-xl sm:text-2xl">Marit Tours</h1>
             </a>
           </div>
           <div className="hidden md:flex space-x-8">
@@ -77,25 +77,25 @@ const Navbar = () => {
         <div className="md:hidden">
           <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
             <a
-              href="#about-us"
+              href="/about"
               className="block text-gray-700 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
             >
               About Us
             </a>
             <a
-              href="#gallery"
+              href="/gallery"
               className="block text-gray-700 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
             >
               Gallery
             </a>
             <a
-              href="#join-us"
+              href="/workwithus"
               className="block text-gray-700 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
             >
               Join Us
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="block text-gray-700 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
             >
               Contact

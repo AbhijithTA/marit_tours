@@ -1,6 +1,6 @@
 const WorkWithUs = () => {
     return (
-      <div className="text-[#077045] py-8 ">
+      <div className="text-[#d01822] py-8 ">
         <h2 className="text-center text-3xl font-bold mb-8 Equila">Work With Us</h2>
         <div className="flex flex-col md:flex-row justify-center items-start max-w-6xl mx-auto px-4 md:px-0">
           {/* Agents Section */}
