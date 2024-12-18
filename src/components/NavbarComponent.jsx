@@ -77,10 +77,10 @@ const Navbar = () => {
         <div className="md:hidden">
           <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
             <a
-              href="/about"
+              href="/package"
               className="block text-gray-700 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium"
             >
-              About Us
+              Packages
             </a>
             <a
               href="/gallery"
