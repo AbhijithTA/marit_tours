@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'CrocoRegular';
+    src: url('./assets/fonts/CrocoRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.CrocoRegular {
+    font-family: 'CrocoRegular', sans-serif;
+}
+
+@font-face {
+    font-family: 'Achemost';
+    src: url('./assets/fonts/Achemost.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Equila';
+    src: url('./assets/fonts/Equila.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.Equila {
+    font-family: 'Equila', sans-serif;
+}

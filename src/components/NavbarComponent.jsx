@@ -5,52 +5,37 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
+        <div className="flex justify-between items-center h-24">
+          <div className="flex items-center ">
             <a
               href="/"
-              className="flex items-center text-teal-500 text-2xl font-bold"
+              className="flex items-center text-[#077045] text-2xl font-bold"
             >
-              <span className="mr-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 12l2-2m0 0l7-7 7 7M13 5v10a1 1 0 001 1h3m10-12l-2 2m-7 7-7 7-7-7"
-                  />
-                </svg>
-              </span>
-              Marit Tours
+              <img src="/MarittoursLogo.jpg" className="h-20 px-6"/>
+              <h1 className="Equila">Marit Tours</h1>
             </a>
           </div>
           <div className="hidden md:flex space-x-8">
             <a
-              href="#aboutus"
+              href="/package"
               className="text-gray-700 hover:text-teal-500 font-medium"
             >
-              About Us
+              Packages
             </a>
             <a
-              href="#aboutus"
+              href="/gallery"
               className="text-gray-700 hover:text-teal-500 font-medium"
             >
               Gallery
             </a>
             <a
-              href="#aboutus"
+              href="/workwithus"
               className="text-gray-700 hover:text-teal-500 font-medium"
             >
               Join Us
             </a>
             <a
-              href="#aboutus"
+              href="/contact"
               className="text-gray-700 hover:text-teal-500 font-medium"
             >
               Contact Us

@@ -1,49 +1,49 @@
 import img1 from "../assets/images/destinationImages/1.jpg";
 import img2 from "../assets/images/destinationImages/2.jpg";
-import img3 from "../assets/images/destinationImages/3.jpg";
-import img4 from "../assets/images/destinationImages/4.jpg";
+import img3 from "../assets/images/destinationImages/Hampiii.jpg";
+import img4 from "../assets/images/destinationImages/ooty.webp";
 import img5 from "../assets/images/destinationImages/5.jpg";
 import img6 from "../assets/images/destinationImages/6.jpg";
 
 const destinations = [
   {
     id: 1,
-    name: "Rajasthan",
+    name: "Munnar",
     tours: "15 Tours",
     image: img1, 
     size: "row-span-2 col-span-2", 
   },
   {
     id: 2,
-    name: "Mount Fuji",
+    name: "Wayanad",
     tours: "10 Tours",
     image: img2, 
     size: "col-span-1", 
   },
   {
     id: 3,
-    name: "Bromo Volcano",
+    name: "Hampi",
     tours: "12 Tours",
     image: img3, 
     size: "col-span-1", 
   },
   {
     id: 4,
-    name: "Himeji Castle",
+    name: "Ooty",
     tours: "8 Tours",
     image: img4, 
     size: "col-span-1", 
   },
   {
     id: 5,
-    name: "Himeji Castle",
+    name: "Koorg",
     tours: "8 Tours",
     image: img5, 
     size: "col-span-1", 
   },
   {
     id: 6,
-    name: "Himeji Castle",
+    name: "Kodaikanal",
     tours: "8 Tours",
     image: img6, 
     size: "col-span-1", 
@@ -52,10 +52,10 @@ const destinations = [
 
 const DestinationGrid = () => {
     return (
-      <div className="bg-gray-50 py-12 px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">
+      <div className="py-12 px-4">
+        <h2 className="text-3xl font-bold text-center mb-8 Achemost">
           <span className="text-gray-900">Trending </span>
-          <span className="text-teal-500">Destinations</span>
+          <span className="text-[#d01822]">Destinations</span>
         </h2>
         <div className="grid grid-cols-3 grid-rows-2 gap-4 max-w-7xl mx-auto">
           {destinations.map((destination) => (
