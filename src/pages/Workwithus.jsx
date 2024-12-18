@@ -1,4 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
+
 const WorkWithUs = () => {
+
+  const navigate = useNavigate(); 
+
     return (
       <div className="text-[#d01822] py-8 ">
         <h2 className="text-center text-3xl font-bold mb-8 Equila">Work With Us</h2>
@@ -21,7 +27,7 @@ const WorkWithUs = () => {
                 Extensive After-Sales Support
               </li>
             </ul>
-            <button className="mt-6 bg-[#d01822] hover:bg-red-900 text-white py-2 px-4 rounded-lg w-full">
+            <button className="mt-6 bg-[#d01822] hover:bg-red-900 text-white py-2 px-4 rounded-lg w-full" onClick={()=>navigate("/contact")}>
               REGISTER ONLINE
             </button>
           </div>
@@ -44,7 +50,7 @@ const WorkWithUs = () => {
                 XML Integration with Major Operators/Agents
               </li>
             </ul>
-            <button className="mt-6 bg-[#d01822] hover:bg-red-900 text-white py-2 px-4 rounded-lg w-full">
+            <button className="mt-6 bg-[#d01822] hover:bg-red-900 text-white py-2 px-4 rounded-lg w-full" onClick={()=>navigate("/contact")}>
               CONTACT US FOR REGISTER
             </button>
           </div>
