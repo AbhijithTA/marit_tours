@@ -4,6 +4,7 @@ import { FaInstagram, FaWhatsapp, FaTwitter } from "react-icons/fa"; // Social i
 import Homebg1 from "../assets/img1.jpg";
 import Homebg2 from "../assets/img2.jpg";
 import Homebg3 from "../assets/img3.jpg";
+import { Link } from "react-router-dom";
 
 const textAnimation = {
   hidden: { y: "100%", opacity: 0 },
@@ -50,15 +51,6 @@ const HeroSection = () => {
 
           {/* Heading and Content */}
           <div className="flex flex-col items-start space-y-4 relative top-[15vh] sm:top-[30vh] lg:top-[33vh] px-4 sm:px-8">
-            <motion.p
-              className="text-xs sm:text-sm md:text-lg text-white px-2"
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 1, delay: 1 }}
-              variants={textAnimation}
-            >
-              TRUST OUR EXPERTS TO NAVIGATE UAE REGULATION WITH EASE
-            </motion.p>
             <motion.h1
               className="text-lg sm:text-3xl md:text-5xl text-white drop-shadow-md w-full sm:w-3/4 lg:w-2/3 CrocoRegular"
               key={currentIndex}
@@ -91,10 +83,14 @@ const HeroSection = () => {
                 className="flex items-center justify-between rounded-full bg-white text-black 
                    shadow-md px-4 sm:px-6 py-2 sm:py-3 gap-4 hover:shadow-lg transition duration-300"
               >
-                <span className="text-xs sm:text-sm font-medium">Booking Now</span>
-                <div
-                  className="flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-black"
+                <Link
+                  to="/contact"
+                  className="text-2xl  sm:text-sm font-medium text-blue-500 "
                 >
+                  {" "}
+                  Booking Now
+                </Link>
+                <div className="flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-black">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -114,8 +110,9 @@ const HeroSection = () => {
             </div>
 
             <p className="text-white text-sm sm:text-lg text-center sm:text-start px-2">
-              Explore how we can help you turn your dreams into unforgettable adventures. 
-              With a team of experts, we make every step easy and seamless.
+              Explore how we can help you turn your dreams into unforgettable
+              adventures. With a team of experts, we make every step easy and
+              seamless.
             </p>
           </div>
         </motion.div>

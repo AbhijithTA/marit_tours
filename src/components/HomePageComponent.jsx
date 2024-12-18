@@ -70,16 +70,7 @@ const TravelSection = () => {
               <p className="text-gray-800 font-bold text-xl">250K+</p>
               <p className="text-gray-600 text-sm"> Journeys Taken</p>
             </div>
-            <div className="text-center">
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="flex items-center justify-center text-[#d01822] text-4xl mb-2"
-              >
-                <MdTravelExplore/>
-              </motion.div>
-              <p className="text-gray-800 font-bold text-xl">15K+</p>
-              <p className="text-gray-600 text-sm">Destinations Explored</p>
-            </div>
+        
             <div className="text-center">
               <motion.div
                 whileHover={{ scale: 1.1 }}
