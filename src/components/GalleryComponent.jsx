@@ -1,25 +1,53 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 
 const GalleryComponent = () => {
-  // Static images
-  const images = [
-    "/1.jpg", "/2.jpg", "/3.jpg", "/4.jpg", "/6.jpg", "/7.jpg", "/8.jpg",
-    "/9.jpg", "/10.jpg", "/11.jpg", "/12.jpg", "/13.jpg", "/14.jpg", "/15.jpg",
-    "/16.jpg", "/18.jpg", "/19.jpg", "/20.jpg", "/21.jpg", "/22.jpg", "/23.jpg", "/24.jpg",
-    "/25.jpg", "/26.jpg", "/27.jpg"
+  // Static images and video
+  const items = [
+    { type: "image", src: "/1.jpg" },
+    { type: "image", src: "/2.jpg" },
+    { type: "image", src: "/3.jpg" },
+    { type: "video", src: "/vid.mp4" }, 
+    { type: "image", src: "/4.jpg" },
+    { type: "image", src: "/6.jpg" },
+    { type: "image", src: "/7.jpg" },
+    { type: "image", src: "/8.jpg" },
+    { type: "image", src: "/9.jpg" },
+    { type: "image", src: "/10.jpg" },
+    { type: "image", src: "/11.jpg" },
+    { type: "image", src: "/12.jpg" },
+    { type: "image", src: "/13.jpg" },
+    { type: "image", src: "/14.jpg" },
+    { type: "image", src: "/15.jpg" },
+    { type: "image", src: "/16.jpg" },
+    { type: "video", src: "/vid3.mp4" }, 
+    { type: "video", src: "/vid2.mp4" }, 
+    { type: "image", src: "/18.jpg" },
+    { type: "image", src: "/19.jpg" },
+    { type: "image", src: "/20.jpg" },
+    { type: "image", src: "/21.jpg" },
+    { type: "image", src: "/22.jpg" },
+    { type: "image", src: "/23.jpg" },
+    { type: "image", src: "/24.jpg" },
+    { type: "image", src: "/25.jpg" },
+    { type: "image", src: "/26.jpg" },
+    { type: "image", src: "/27.jpg" },
+    { type: "image", src: "/28.jpg" },
+    { type: "image", src: "/29.jpg" },
+    { type: "image", src: "/30.jpg" },
+    { type: "image", src: "/31.jpg" },
   ];
-
+  
   // Parallax Effect
   const parallaxEffect = useMotionValue(0);
   const yTransform = useTransform(parallaxEffect, [0, 1], [0, -50]);
 
   // State for modal
   const [isOpen, setIsOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const openModal = (index) => {
-    setCurrentImageIndex(index);
+    setCurrentIndex(index);
     setIsOpen(true);
   };
 
@@ -27,14 +55,12 @@ const GalleryComponent = () => {
     setIsOpen(false);
   };
 
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const nextItem = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
   };
 
-  const prevImage = () => {
-    setCurrentImageIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
+  const prevItem = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
   };
 
   return (
@@ -43,10 +69,12 @@ const GalleryComponent = () => {
       onMouseMove={(e) => parallaxEffect.set(e.clientY / window.innerHeight)}
     >
       <h2 className="text-center text-2xl font-bold mb-20 text-[#077045] Equila">
-      Through the Eyes of Our Travelers: <br /> <span className="text-[#d01822] text-4xl">  Your Story in Photos</span> 
+        Through the Eyes of Our Travelers: <br />{" "}
+        <span className="text-[#d01822] text-4xl">Your Story in Photos</span>
       </h2>
+
       <div className="flex flex-wrap justify-center gap-8">
-        {images.map((image, index) => (
+        {items.map((item, index) => (
           <motion.div
             key={index}
             className="w-80 h-60 relative overflow-hidden rounded-lg shadow-lg cursor-pointer"
@@ -57,11 +85,21 @@ const GalleryComponent = () => {
             onClick={() => openModal(index)}
             style={{ y: yTransform }}
           >
-            <img
-              src={image}
-              alt={`Gallery Image ${index + 1}`}
-              className="w-full h-full object-cover"
-            />
+            {item.type === "image" ? (
+              <img
+                src={item.src}
+                alt={`Gallery Item ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <video
+                src={item.src}
+                className="w-full h-full object-cover"
+                muted
+                loop
+                autoPlay
+              />
+            )}
           </motion.div>
         ))}
       </div>
@@ -84,20 +122,29 @@ const GalleryComponent = () => {
             </button>
 
             <motion.div className="relative">
-              <img
-                src={images[currentImageIndex]}
-                alt={`Modal Image ${currentImageIndex + 1}`}
-                className="w-96 h-72 object-cover rounded-lg"
-              />
+              {items[currentIndex].type === "image" ? (
+                <img
+                  src={items[currentIndex].src}
+                  alt={`Modal Item ${currentIndex + 1}`}
+                  className="w-96 h-72 object-cover rounded-lg"
+                />
+              ) : (
+                <video
+                  src={items[currentIndex].src}
+                  className="w-96 h-72 object-cover rounded-lg"
+                  controls
+                  autoPlay
+                />
+              )}
               <button
                 className="absolute left-0 top-1/2 transform -translate-y-1/2 text-3xl text-white"
-                onClick={prevImage}
+                onClick={prevItem}
               >
                 ‹
               </button>
               <button
                 className="absolute right-0 top-1/2 transform -translate-y-1/2 text-3xl text-white"
-                onClick={nextImage}
+                onClick={nextItem}
               >
                 ›
               </button>
