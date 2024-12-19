@@ -16,18 +16,21 @@ const ParallaxCards = () => {
   const navigate = useNavigate();
 
   const cards = [
-
     {
       id: 1,
       title: "Dubai",
-      description: "Discover the city of Gold.",
-      image:  Dubai ,
-      days: "1 Day",
+      description: "Explore the city of Gold with Marit Tours & Travels.",
+      image: Dubai,
+      days: "5 Days",
       itinerary: [
-        "Coming soon",
-        
+        "Day 1: Arrival in Dubai - Check-in to a 3* hotel and leisure time.",
+        "Day 2: Sightseeing tour covering iconic landmarks.",
+        "Day 3: Desert Safari adventure with dinner.",
+        "Day 4: Dhow Cruise Dinner at Marina.",
+        "Day 5: Shopping and leisure; departure.",
       ],
     },
+
     {
       id: 2,
       title: "Cochin - Munnar - Thekkady - Alleppey",
@@ -138,14 +141,13 @@ const ParallaxCards = () => {
         "Evening: Reach summit or endpoint and return to base camp.",
       ],
     },
-   
   ];
 
   const handleOpenModal = (card) => setSelectedCard(card);
   const handleCloseModal = () => setSelectedCard(null);
 
   const handleEnquiryClick = () => {
-    navigate("/contact"); 
+    navigate("/contact");
   };
 
   return (
