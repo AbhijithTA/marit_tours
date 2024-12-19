@@ -8,6 +8,7 @@ import Pondicherry from "../assets/images/destinationImages/pondicherry.jpg";
 import Wildlife from "../assets/images/destinationImages/wildlife.webp";
 import Cycle from "../assets/images/destinationImages/cycle.jpg";
 import Trekking from "../assets/images/destinationImages/Trekking.jpg";
+import Dubai from "../assets/images/destinationImages/Dubai.jpg";
 import { useNavigate } from "react-router-dom";
 
 const ParallaxCards = () => {
@@ -123,6 +124,17 @@ const ParallaxCards = () => {
         "Midday: Start trek with experienced guides, explore flora and fauna.",
         "Afternoon: Break for lunch at a scenic spot on the trail.",
         "Evening: Reach summit or endpoint and return to base camp.",
+      ],
+    },
+    {
+      id: 9,
+      title: "Dubai",
+      description: "Discover the city of Gold.",
+      image:  Dubai ,
+      days: "1 Day",
+      itinerary: [
+        "Coming soon",
+        
       ],
     },
   ];

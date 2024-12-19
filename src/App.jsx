@@ -1,34 +1,30 @@
 import "./App.css";
 import Navbar from "./components/NavbarComponent";
-import DestinationGrid from "./components/TrendingDestination";
-import Hero from "./pages/Hero";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import TravelSection from "./components/HomePageComponent";
-import Gallery from "./components/GalleryComponent";
-import ContactUs from "./pages/Contact";
-import ParallaxCards from "./pages/Package";
-import WorkWithUs from "./pages/Workwithus";
+import { Suspense, lazy } from "react";
 import Loader from "./components/Loader";
-import { useEffect, useState } from "react";
+
+// Lazy load components
+const Hero = lazy(() => import("./pages/Hero"));
+const TravelSection = lazy(() => import("./components/HomePageComponent"));
+const DestinationGrid = lazy(() => import("./components/TrendingDestination"));
+const Gallery = lazy(() => import("./components/GalleryComponent"));
+const ContactUs = lazy(() => import("./pages/Contact"));
+const ParallaxCards = lazy(() => import("./pages/Package"));
+const WorkWithUs = lazy(() => import("./pages/Workwithus"));
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const handleLoad = () => {
-      setIsLoading(false);
-    };
-
-    window.addEventListener("load", handleLoad);
-    return () => window.removeEventListener("load", handleLoad);
-  }, []);
-
   return (
-    <>
-      {isLoading && <Loader />}
-      <Router>
-        <Navbar />
+    <Router>
+      <Navbar />
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center h-screen text-xl">
+            <Loader />
+          </div>
+        }
+      >
         <Routes>
           <Route
             path="/"
@@ -45,9 +41,9 @@ function App() {
           <Route path="/package" element={<ParallaxCards />} />
           <Route path="/workwithus" element={<WorkWithUs />} />
         </Routes>
-        <Footer />
-      </Router>
-    </>
+      </Suspense>
+      <Footer />
+    </Router>
   );
 }
 
