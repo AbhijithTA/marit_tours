@@ -16,8 +16,20 @@ const ParallaxCards = () => {
   const navigate = useNavigate();
 
   const cards = [
+
     {
       id: 1,
+      title: "Dubai",
+      description: "Discover the city of Gold.",
+      image:  Dubai ,
+      days: "1 Day",
+      itinerary: [
+        "Coming soon",
+        
+      ],
+    },
+    {
+      id: 2,
       title: "Cochin - Munnar - Thekkady - Alleppey",
       description: "5 Days 4 Nights Package : God's Own Country",
       image: Kerala,
@@ -31,7 +43,7 @@ const ParallaxCards = () => {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: "Ooty - Kodaikanal - Rameswaram",
       description: "7 Days 6 Nights Package : Tamil Nadu",
       image: tamilNadu,
@@ -47,7 +59,7 @@ const ParallaxCards = () => {
       ],
     },
     {
-      id: 3,
+      id: 4,
       title: "Bangalore - Mysore - Ooty - Kodaikanal",
       description: "7 Days 6 Nights Package : Karnataka",
       image: Ooty,
@@ -63,7 +75,7 @@ const ParallaxCards = () => {
       ],
     },
     {
-      id: 4,
+      id: 5,
       title: "Kodaikanal Getaway",
       description: "Misty hills, serene lakes, and lush greenery.",
       image: Kodaikanal,
@@ -76,7 +88,7 @@ const ParallaxCards = () => {
       ],
     },
     {
-      id: 5,
+      id: 6,
       title: "Scenic Pondicherry",
       description: "French charm and seaside promenades.",
       image: Pondicherry,
@@ -88,7 +100,7 @@ const ParallaxCards = () => {
       ],
     },
     {
-      id: 6,
+      id: 7,
       title: "Wildlife Sanctuaries",
       description: "Rich biodiversity and serene landscapes.",
       image: Wildlife,
@@ -101,7 +113,7 @@ const ParallaxCards = () => {
       ],
     },
     {
-      id: 7,
+      id: 8,
       title: "Cycle Tours",
       description: "Discover nature on two wheels.",
       image: Cycle,
@@ -114,7 +126,7 @@ const ParallaxCards = () => {
       ],
     },
     {
-      id: 8,
+      id: 9,
       title: "Trekking",
       description: "Discover nature on Hills.",
       image: Trekking,
@@ -126,17 +138,7 @@ const ParallaxCards = () => {
         "Evening: Reach summit or endpoint and return to base camp.",
       ],
     },
-    {
-      id: 9,
-      title: "Dubai",
-      description: "Discover the city of Gold.",
-      image:  Dubai ,
-      days: "1 Day",
-      itinerary: [
-        "Coming soon",
-        
-      ],
-    },
+   
   ];
 
   const handleOpenModal = (card) => setSelectedCard(card);
