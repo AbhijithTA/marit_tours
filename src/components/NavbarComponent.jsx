@@ -6,10 +6,10 @@ const Navbar = () => {
     <nav className="bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
-          <div className="flex items-center ">
+          <div className="flex  items-center ">
             <a
               href="/"
-              className="flex items-center text-[#077045] text-2xl font-bold"
+              className="flex  items-center text-[#077045] text-2xl font-bold"
             >
               <img src="/MarittoursLogo.jpg" className="h-20 sm:px-6"/>
               <h1 className="Equila text-xl sm:text-2xl">Marit Tours</h1>

@@ -16,34 +16,34 @@ const WorkWithUs = lazy(() => import("./pages/Workwithus"));
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Suspense
-        fallback={
-          <div className="flex justify-center items-center h-screen text-xl">
-            <Loader />
-          </div>
-        }
-      >
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div>
-                <Hero />
-                <TravelSection />
-                <DestinationGrid />
-              </div>
-            }
-          />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/package" element={<ParallaxCards />} />
-          <Route path="/workwithus" element={<WorkWithUs />} />
-        </Routes>
-      </Suspense>
-      <Footer />
-    </Router>
+    // <Router>
+    //   <Navbar />
+    //   <Suspense
+    //     fallback={
+    //       <div className="flex justify-center items-center h-screen text-xl">
+    //         <Loader />
+    //       </div>
+    //     }
+    //   >
+    //     <Routes>
+    //       <Route
+    //         path="/"
+    //         element={
+    //           <div>
+    //             <Hero />
+    //             <TravelSection />
+    //             <DestinationGrid />
+    //           </div>
+    //         }
+    //       />
+    //       <Route path="/gallery" element={<Gallery />} />
+    //       <Route path="/contact" element={<ContactUs />} />
+    //       <Route path="/package" element={<ParallaxCards />} />
+    //       <Route path="/workwithus" element={<WorkWithUs />} />
+    //     </Routes>
+    //   </Suspense>
+    //   <Footer />
+    // </Router>
   );
 }
 
